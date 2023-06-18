@@ -25,7 +25,7 @@ export function ExpectedContainer() {
         <Chart data={expected as ChartDataType[]} isDark type={chartSelected} />
       </Center>
 
-      <Center>
+      <Center mb={4}>
         <HStack bg="gray.600" roundedRight="full" roundedLeft="full" shadow="8">
           <ChartButton
             as={Feather}

@@ -6,13 +6,13 @@ import { StatusBar } from "react-native";
 
 export function Home() {
   return (
-    <ScrollView contentContainerStyle={{ flexGrow: 1 }} bg="yellow.700">
+    <VStack flex={1} bg="yellow.700">
       <StatusBar
         barStyle="light-content"
         backgroundColor="transparent"
         translucent
       />
-      <VStack>
+      <VStack flex={1} pb={4}>
         <GeneratedContainer />
 
         <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
@@ -21,6 +21,6 @@ export function Home() {
           <ExpectedContainer />
         </ScrollView>
       </VStack>
-    </ScrollView>
+    </VStack>
   );
 }

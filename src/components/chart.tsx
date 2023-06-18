@@ -25,6 +25,7 @@ export function Chart({ data, isDark, type = "bar" }: Props) {
     <VictoryChart
       containerComponent={<VictoryZoomContainer zoomDomain={{ x: [0, 15] }} />}
       domainPadding={{ x: 10 }}
+      style={{ parent: { paddingLeft: 32 } }}
       height={200}
     >
       <VictoryAxis
