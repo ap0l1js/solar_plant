@@ -1,8 +1,8 @@
 import { ExpectedContainer } from "@containers/expected";
+import { GeneratedContainer } from "@containers/generated";
 import { Statistics } from "@containers/statistics";
 import { VStack } from "native-base";
 import { StatusBar } from "react-native";
-import { GeneratedContainer } from "../containers/generated";
 
 export function Home() {
   return (

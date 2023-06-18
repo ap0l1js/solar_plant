@@ -15,7 +15,7 @@ export function GeneratedContainer() {
   const groups = [
     { key: "hourly", value: "Hora" },
     { key: "daily", value: "Dia" },
-    { key: "monthly", value: "Mes" },
+    { key: "monthly", value: "Mês" },
     { key: "yearly", value: "Ano" },
   ];
 
