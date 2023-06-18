@@ -9,7 +9,7 @@ import { useContext } from "react";
 import { TouchableOpacity } from "react-native";
 
 export function GeneratedContainer() {
-  const { totals, groupSelected, setGroupSelected, generation } =
+  const { totals, groupSelected, setGroupSelected, generation, chartSelected } =
     useContext(StorageContext);
 
   const groups = [
@@ -30,7 +30,7 @@ export function GeneratedContainer() {
       roundedBottomRight={50}
       roundedBottomLeft={50}
     >
-      <VStack space={4}>
+      <VStack space={2}>
         <HStack>
           <Header
             title="Total Gerado"
@@ -59,10 +59,7 @@ export function GeneratedContainer() {
         </ScrollView>
 
         <Center>
-          <Chart
-            data={generation as ChartDataType[]}
-            barWidth={groupSelected === "daily" ? 4 : 16}
-          />
+          <Chart data={generation as ChartDataType[]} type={chartSelected} />
         </Center>
       </VStack>
     </VStack>

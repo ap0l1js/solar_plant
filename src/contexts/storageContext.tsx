@@ -23,7 +23,9 @@ type StorageContextProviderProps = {
 
 export type StorageContextDataProps = DataType & {
   setGroupSelected: (group: string) => void;
+  setChartSelected: (group: "bar" | "area") => void;
   groupSelected: string;
+  chartSelected: "bar" | "area";
 };
 
 export const StorageContext = createContext<StorageContextDataProps>(
@@ -35,11 +37,17 @@ export function StorageContextProvider({
 }: StorageContextProviderProps) {
   const [data, setData] = useState<DataType>();
   const [groupSelected, setGroupSelected] = useState("hourly");
+  const [chartSelected, setChartSelected] = useState<"bar" | "area">("bar");
   const [isLoading, setIsLoading] = useState(true);
 
   const toast = useToast();
+
   function handleChangeSelectedGroup(group: string) {
     setGroupSelected(group);
+  }
+
+  function handleChangeSelectedChart(chart: "bar" | "area") {
+    setChartSelected(chart);
   }
 
   async function fetchData() {
@@ -104,8 +112,10 @@ export function StorageContextProvider({
     <StorageContext.Provider
       value={{
         ...(data as StorageContextDataProps),
+        chartSelected,
         groupSelected,
         setGroupSelected: handleChangeSelectedGroup,
+        setChartSelected: handleChangeSelectedChart,
       }}
     >
       {children}
