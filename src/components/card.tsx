@@ -20,15 +20,10 @@ export function Card({ title, description, ...rest }: Props) {
       overflow="hidden"
       {...rest}
     >
-      <Text
-        color={"gray.200"}
-        fontSize="2xs"
-        fontWeight="bold"
-        fontFamily="krona"
-      >
+      <Text color={"gray.200"} fontSize="2xs" fontWeight="bold">
         {description}
       </Text>
-      <Heading fontSize="md" fontFamily="krona" color="gray.200">
+      <Heading fontSize="md" color="gray.200">
         {title}
       </Heading>
     </VStack>

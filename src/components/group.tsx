@@ -26,7 +26,6 @@ export function Group({ name, isActive, ...rest }: Props) {
         color={isActive ? "gray.700" : "gray.200"}
         fontSize="xs"
         fontWeight="bold"
-        fontFamily="krona"
       >
         {name}
       </Text>

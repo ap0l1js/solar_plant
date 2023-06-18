@@ -37,7 +37,7 @@ export function Welcome() {
           </Center>
 
           <VStack space="10" mt={24}>
-            <Heading color="gray.100" fontSize="4xl" fontFamily="krona">
+            <Heading color="gray.100" fontSize="4xl">
               Pra quem precisa de uma luz. A energia Yellot nunca tem fim.
             </Heading>
 

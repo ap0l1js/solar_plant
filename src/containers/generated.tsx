@@ -39,7 +39,7 @@ export function GeneratedContainer() {
           />
 
           <TouchableOpacity onPress={() => navigation.navigate("welcome")}>
-            <Text fontSize="sm" color="yellow.700" fontFamily="krona">
+            <Text fontSize="sm" color="yellow.700">
               Voltar
             </Text>
           </TouchableOpacity>

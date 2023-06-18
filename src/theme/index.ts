@@ -27,9 +27,7 @@ export const THEME = extendTheme({
     },
   },
   fonts: {
-    heading: "Roboto_700Bold",
-    body: "Roboto_400Regular",
-    krona: "KronaOne_400Regular",
+    body: "KronaOne_400Regular",
   },
   fontSizes: {
     xs: 12,

@@ -10,18 +10,10 @@ type Props = IBoxProps & {
 export function Header({ title, value, unit, isDark, ...rest }: Props) {
   return (
     <Box flex={1} {...rest}>
-      <Text
-        color={isDark ? "gray.700" : "gray.200"}
-        fontSize="md"
-        fontFamily="krona"
-      >
+      <Text color={isDark ? "gray.700" : "gray.200"} fontSize="md">
         {title}
       </Text>
-      <Heading
-        color={isDark ? "black" : "white"}
-        fontSize="4xl"
-        fontFamily="krona"
-      >
+      <Heading color={isDark ? "black" : "white"} fontSize="4xl">
         {value}
         <Text fontSize="md" fontFamily="body">
           {unit}
